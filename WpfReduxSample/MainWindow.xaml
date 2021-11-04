@@ -1,0 +1,30 @@
+﻿<Window x:Class="WpfReduxSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfReduxSample"
+        mc:Ignorable="d"
+        SizeToContent="WidthAndHeight"
+        Title="WPF Redux Sample" Height="220" Width="300">
+    <Grid Margin="10">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="Counter" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" Text="0" FontSize="72"/>
+        <Button x:Name="Decrement" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Right" Margin="10" Click="Decrement_Click">
+            <TextBlock Text="Decrement!" Margin="10"/>
+        </Button>
+        <Button x:Name="Increment" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Margin="10" Click="Increment_Click">
+            <TextBlock Text="Increment!" Margin="10"/>
+        </Button>
+        <TextBlock x:Name="Primes" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Center" Text="" FontSize="16"/>
+    </Grid>
+</Window>
